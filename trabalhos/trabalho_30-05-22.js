@@ -96,7 +96,7 @@ C = parseInt(prompt("Digite o número de colheres de sopa de leite: "));
 
 rec = Math.floor((A/2 + B/3 + C/5)/3);
 
-alert("João consegue fazer "+Math.floor(rec)+" bolo(s).");
+alert("João consegue fazer "+rec+" bolo(s).");
 
 /* 
 4. Faça um programa para verificar se se dois intervalos fechados (I1, F1, I2, F2) possuem
