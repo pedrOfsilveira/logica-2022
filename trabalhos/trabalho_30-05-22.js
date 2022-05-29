@@ -91,7 +91,7 @@ bolos que ele consegue fazer.
 var A, B, C, rec;
 
 A = parseInt(prompt("Digite o número de xícaras de farinha de trigo: "));
-B = parseInt(prompt("Digite o npúmero de ovos: "));
+B = parseInt(prompt("Digite o número de ovos: "));
 C = parseInt(prompt("Digite o número de colheres de sopa de leite: "));
 
 rec = Math.floor((A/2 + B/3 + C/5)/3);
