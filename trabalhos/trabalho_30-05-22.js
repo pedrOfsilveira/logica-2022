@@ -111,8 +111,6 @@ I2 = Number(prompt("I2: "));
 F2 = Number(prompt("F2: "));
 
 
-2,8
-0,4
 
 if ((I2 >= I1 && I2 <= F1)||(F2 >= I1 && F2 <= F1)||(I1 >= I2 && I1 <= F2)||(F1 >= I2 && F1 <= F2)) {
   alert("Possui intersecção!");
