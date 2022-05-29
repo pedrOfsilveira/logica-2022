@@ -35,10 +35,10 @@ M13 = A3 + A6 + A9;
 M21 = A1 + A5 + A9;
 M22 = A3 + A5 + A7;
 
-if ((M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 != M22)) {
+if ((M1 == M11) && (M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 != M22)) {
   alert("O quadrado é quase mágico, e M é igual a: "+M1);
 }
-else if ((M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 == M22)) {
+else if ((M1 == M11) && (M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 == M22)) {
   alert("O quadrado é mágico, e M é igual a: "+M1);
 }
 else {
@@ -114,7 +114,7 @@ F2 = Number(prompt("F2: "));
 2,8
 0,4
 
-if ((I2 >= I1 && I2 <= F1)||(F2 >= I1 && F2 <= F1)) {
+if ((I2 >= I1 && I2 <= F1)||(F2 >= I1 && F2 <= F1)||(I1 >= I2 && I1 <= F2)||(F1 >= I2 && F1 <= F2)) {
   alert("Possui intersecção!");
 }
 else {
