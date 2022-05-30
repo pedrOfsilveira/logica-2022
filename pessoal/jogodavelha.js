@@ -6,7 +6,7 @@ valid = 0;
 board = [
   [0,0,0],
   [0,0,0],
-  [0,0,0]0
+  [0,0,0]
 ]
 team1 = parseInt(prompt("Escolha seu time: \n1 \n2"));
 if (team1 == 1) {
