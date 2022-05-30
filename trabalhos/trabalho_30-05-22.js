@@ -96,7 +96,7 @@ C = parseInt(prompt("Digite o número de colheres de sopa de leite: "));
 
 rec = Math.floor((A/2 + B/3 + C/5)/3);
 
-alert("João consegue fazer "+rec+" bolo(s).");
+alert("João consegue fazer "+Math.floor(rec)+" bolo(s).");
 
 /* 
 4. Faça um programa para verificar se se dois intervalos fechados (I1, F1, I2, F2) possuem
@@ -105,12 +105,15 @@ intersecção de valores, onde I e F representam o início e fim de cada interva
 
 var I1, F1, I2, F2;
 
+  do {
+    var a = Number(prompt("insira um número"));
+  }while(typeof(a) != Number)
+
+
 I1 = Number(prompt("I1: "));
 F1 = Number(prompt("F1: "));
 I2 = Number(prompt("I2: "));
 F2 = Number(prompt("F2: "));
-
-
 
 if ((I2 >= I1 && I2 <= F1)||(F2 >= I1 && F2 <= F1)||(I1 >= I2 && I1 <= F2)||(F1 >= I2 && F1 <= F2)) {
   alert("Possui intersecção!");
