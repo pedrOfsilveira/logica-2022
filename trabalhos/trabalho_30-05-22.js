@@ -42,7 +42,7 @@ else if ((M1 == M11) && (M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && 
   alert("O quadrado é mágico, e M é igual a: "+M1);
 }
 else {
-  alert("O quadrado não é mágico.")
+  alert("O quadrado não é mágico.");
 }
 
 
