@@ -95,8 +95,12 @@ B = parseInt(prompt("Digite o número de ovos: "));
 C = parseInt(prompt("Digite o número de colheres de sopa de leite: "));
 
 rec = Math.floor((A/2 + B/3 + C/5)/3);
+if(A/2 < 1 || B/3 < 1 || C/5 < 1) {
+  alert("João não consegue fazer nenhum bolo!")
+} else {
+  alert("João consegue fazer "+Math.floor(rec)+" bolo(s).");
+}
 
-alert("João consegue fazer "+Math.floor(rec)+" bolo(s).");
 
 /* 
 4. Faça um programa para verificar se se dois intervalos fechados (I1, F1, I2, F2) possuem
