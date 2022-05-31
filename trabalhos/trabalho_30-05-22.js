@@ -68,8 +68,7 @@ folha_comp = parseInt(prompt("Digite o número de folhas por competidor: "));
 
 if (folha >= folha_comp*comp) {
   alert("O número de folhas é suficiente.");
-}
-else if (folha < folha_comp*comp) {
+} else if (folha < folha_comp*comp) {
   alert("O número de folhas não é suficiente.");
 }
 
@@ -93,9 +92,9 @@ B = parseInt(prompt("Digite o número de ovos: "))/3;
 C = parseInt(prompt("Digite o número de colheres de sopa de leite: "))/5;
 
 if(A < 1 || B < 1 || C < 1) {
-  alert("João não consegue fazer nenhum bolo!")
+  alert("João não consegue fazer nenhum bolo!");
 } else {
-  alert("João consegue fazer "+Math.min(A,B,C)+" bolo(s)");
+  alert("João consegue fazer "+Math.floor(Math.min(A,B,C))+" bolo(s)");
 }
 /* 
 4. Faça um programa para verificar se se dois intervalos fechados (I1, F1, I2, F2) possuem
