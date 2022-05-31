@@ -37,11 +37,9 @@ M22 = A3 + A5 + A7;
 
 if ((M1 == M11) && (M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 != M22)) {
   alert("O quadrado é quase mágico, e M é igual a: "+M1);
-}
-else if ((M1 == M11) && (M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 == M22)) {
+} else if ((M1 == M11) && (M1 == M2 && M1 == M3) && (M11 == M12 && M11 == M13) && (M21 == M22)) {
   alert("O quadrado é mágico, e M é igual a: "+M1);
-}
-else {
+} else {
   alert("O quadrado não é mágico.");
 }
 
@@ -90,29 +88,21 @@ bolos que ele consegue fazer.
 
 var A, B, C, rec;
 
-A = parseInt(prompt("Digite o número de xícaras de farinha de trigo: "));
-B = parseInt(prompt("Digite o número de ovos: "));
-C = parseInt(prompt("Digite o número de colheres de sopa de leite: "));
+A = parseInt(prompt("Digite o número de xícaras de farinha de trigo: "))/2;
+B = parseInt(prompt("Digite o número de ovos: "))/3;
+C = parseInt(prompt("Digite o número de colheres de sopa de leite: "))/5;
 
-rec = Math.floor((A/2 + B/3 + C/5)/3);
-if(A/2 < 1 || B/3 < 1 || C/5 < 1) {
+if(A < 1 || B < 1 || C < 1) {
   alert("João não consegue fazer nenhum bolo!")
 } else {
-  alert("João consegue fazer "+Math.floor(rec)+" bolo(s).");
+  alert("João consegue fazer "+Math.min(A,B,C)+" bolo(s)");
 }
-
-
 /* 
 4. Faça um programa para verificar se se dois intervalos fechados (I1, F1, I2, F2) possuem
 intersecção de valores, onde I e F representam o início e fim de cada intervalo.
 */
 
 var I1, F1, I2, F2;
-
-  do {
-    var a = Number(prompt("insira um número"));
-  }while(typeof(a) != Number)
-
 
 I1 = Number(prompt("I1: "));
 F1 = Number(prompt("F1: "));
