@@ -51,4 +51,4 @@ for (let len = numinv.length - 1; len >= 0; len--) {
   numconv += numinv[len];
 }
 
-alert('O número convertido para binário é: '+numconv);
+alert('O número convertido para a base '+base+' é:'+numconv);
