@@ -297,4 +297,151 @@ while (x != 0) {
   console.log('O resultado da função é: ' + r);
 }
 
-//5.
+/* 5. Calcular o faturamento total mensal de um armazém, sabendo-se que, para cada uma
+  das mercadorias com que o armazém trabalha dispões-se dos seguintes dados:
+    - O nome da mercadoria;
+    - O seu preço unitário;
+    - A quantidade total vendida no mês.
+  O faturamento total do armazém será calculado somando-se o total faturado por cada 
+  mercadoria, que é igual a quantidade vendida da mercadoria vezes seu preço unitário.
+  O número de mercadorias comercializadas pelo armazém deve ser informado pelo usuário. */
+
+var c, qtd_m, nome, valor, qtd, tot, fat;
+
+c = 1 ;
+fat = 0;
+tot = 0;
+qtd_m = Number(prompt('Digite a quantidade de mercadorias: '));
+
+while (c <= qtd_m) {
+  nome = String(prompt('Digite o nome da mercadoria: '));
+  valor = Number(prompt('Digite o valor unitário da mercadoria: '));
+  qtd = Number(prompt('Digite a quantidade vendida: '));
+  tot = valor*qtd;
+  fat += tot;  
+  c++;
+}
+console.log('O faturamento total do armazém é de R$'+fat);
+
+
+/*
+
+  do... while
+
+  do {
+    comando1;
+    comando2;
+  } while (condição);
+*/
+
+do {
+  var n = Math.ceil(Math.random()*10);
+  alert('O número sorteado foi '+n);
+  var resp = parseInt(prompt('Deseja sortear novamente?\n1.SIM\n2.NÃO'));
+}while (resp == 1);
+
+/*
+ 
+  for
+
+  for( inic; condição; incremento) {
+    comandos;
+  }
+*/
+
+for(c = 1; c <= 5; c++) {
+  console.log(c);
+}
+
+//6. Apresentar os quadrados dos números inteiros de 15 a 200
+
+for(i = 15; i <= 200; i++) {
+  console.log(i**2);  
+}
+
+/*
+  7.  Apresentar  os  resultados  de uma  tabuada  de  um  número  qualquer,  a  qual  deve  ser mostrada 
+  no seguinte formato, considerando como exemplo o
+  fornecimento do número 2:
+  2 x 1 = 2
+  2 x 2 = 4
+  2 x 3 = 6
+  (...)
+  2 x 10 = 20
+*/
+
+var n
+
+n = parseInt(prompt('Digite um número inteiro: '));
+
+for(i = 1; i <= 10; i++) {
+  console.log(n+' x '+i+' = '+(n*i));
+}
+
+//8. Apresentar o somatório dos valores pares existentes na faixa de 1 até 500.
+
+var s;
+
+s = 0;
+
+for(i = 1; i <= 500; i++) {
+  if (i%2 == 0) {
+    s += i;
+  }
+}
+console.log(s);    
+
+//9. Apresentar todos os valores numéricos inteiros ímpares situados na faixa de 0 a 20.
+
+
+for(i = 1; i <= 20; i++) {
+  if (i%2 != 0) {
+    console.log(i);
+  }
+}  
+
+//10. Apresentar os resultados das potências de 3, variando o expoente de 0 (zero) até 15.
+
+for(i = 0; i <= 15; i++) {
+    console.log(3**i);
+}  
+
+/*
+  11. Calcular N! (fatorial de N), sendo que o valor de N é fornecido pelo usuário e sabendo que:
+  N! = 1 x 2 x 3 x ... x (N - 1) x N
+  0! = 1, por definição.
+*/
+
+var n, f;
+
+f = 1;
+n = Number(prompt('Digite o valor de N: '));
+for(i = 1; i <= n; i++) {
+  if(n != 0) {
+    f *= i;
+  } else {
+    f = 1;  
+  }
+}
+console.log(n+'! = '+f);
+
+/*
+  12. Sendo H = 1 + 1/2 + 1/3 + 1/4 + ... + 1/N, 
+  calcular o número H. O número N é fornecido pelo 
+  usuário.
+*/
+
+var h, n;
+
+h = 1;
+n = Number(prompt('Digite o valor de N: '));
+for(i = 1; i <= n; i++) {
+  h += 1/i;
+}
+console.log('H = '+h);
+
+
+
+
+
+  
