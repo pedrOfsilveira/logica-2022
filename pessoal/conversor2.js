@@ -1,6 +1,5 @@
-var base, base2, num, numinv, num10, numconv;
+var base, base2, num, numinv, num10;
 numinv = '';
-numconv = '';
 num10 = 0;
 
 do {
@@ -11,18 +10,41 @@ do {
   base2 = parseInt(prompt('Digite a base NA QUAL o número será convertido: (2, 8, 10, 16)'));
 } while (isNaN(base2));
 
-do {
-  num = parseInt(prompt('Digite o número será convertido: '));
-} while (isNaN(num));
+num = prompt('Digite o número será convertido: ');
 
 //CONVERSAO PRA DECIMAL:
-numconv += num;
-numconv = numconv.split('');
-numconv.reverse();
-for (i = 0; i < numconv.length; i++) {
-  num10 += numconv[i] * (base**i);
+num = num.split('');
+num.reverse();
+for (i = 0; i < num.length; i++) {
+    switch (num[i]) {
+      case 'A':
+      case 'a':
+        num10 += 10 * (base**i);
+        break;
+      case 'B':
+      case 'b':
+        num10 += 11 * (base**i);
+        break;
+      case 'C':
+      case 'c':
+        num10 += 12 * (base**i);
+        break;
+      case 'D':
+      case 'd':
+        num10 += 13 * (base**i);
+        break;
+      case 'E':
+      case 'e':
+        num10 += 14 * (base**i);
+        break;
+      case 'F':
+      case 'f':
+        num10 += 15 *(base**i);
+        break;
+      default:
+        num10 += num[i] * (base**i);
+    }
 }
-
 //CONVERSAO PRA BASE DESEJADA:
 do {
   if (base2 == 16) {
