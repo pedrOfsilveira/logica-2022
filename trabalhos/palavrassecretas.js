@@ -21,27 +21,18 @@
 
 var bd3, bd5, bd7, word, num, lvl, ti, letra, tentativa, certas, rep, again;
 
-bd3 =
-  ',vil,fim,fio,mel,bom,paz,dom,som,sol,sal,lar,bar,dar,mar,dor,ato,lua,sua,boa,bem,mal,mau,mil,meu,teu,seu';
-bd5 =
-  ',termo,nobre,afeto,honra,culto,forte,ordem,feliz,servo,ontem,forma,lugar,senil,ritmo,falso,tempo,ideal';
-
-bd7 =
-  ',virtude,firmeza,abusivo,envolta,oscilar,diverso,aumento,imaturo,abduzir,fortuna,sotaque,estigma,cordial,aspecto,coragem'
+bd3 = ',vil,fim,fio,mel,bom,paz,dom,som,sol,sal,lar,bar,dar,mar,dor,ato,lua,sua,boa,bem,mal,mau,mil,meu,teu,seu';
+bd5 = ',termo,nobre,afeto,honra,culto,forte,ordem,feliz,servo,ontem,forma,lugar,senil,ritmo,falso,tempo,ideal';
+bd7 = ',virtude,firmeza,abusivo,envolta,oscilar,diverso,aumento,imaturo,abduzir,fortuna,sotaque,estigma,cordial,aspecto,coragem'
 
 do {
 
   tentativa = 7;
   certas = 0;
   rep = 0;
-  
 
   do {
-    lvl = parseInt(
-      prompt(
-        'Escolha a dificuldade:\n1. Fácil (3 letras)\n2. Médio (5 letras)\n3. Difícil (7 letras)'
-      )
-    );
+    lvl = parseInt(prompt('Escolha a dificuldade:\n1. Fácil (3 letras)\n2. Médio (5 letras)\n3. Difícil (7 letras)'));
   } while (lvl != 1 && lvl != 2 && lvl != 3);
 
   switch (lvl) {
@@ -101,7 +92,6 @@ do {
       }
     }
     
-
     ti += ' ' + certas-rep;
   } while (
     letra.toUpperCase() != word.toUpperCase() &&
