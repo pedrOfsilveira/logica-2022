@@ -1,7 +1,10 @@
 var size, str, increment, count;
 str = '';
 count = 0;
-size = prompt('Digite o tamanho da sequência: ');
+
+do {
+  size = prompt('Digite o tamanho da sequência: ');
+} while (isNaN(size));
 
 for (i = 0; i < size; i++) {
   do {
