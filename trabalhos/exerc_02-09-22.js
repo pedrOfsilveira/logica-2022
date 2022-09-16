@@ -280,7 +280,6 @@ for (i = 0; i < 30; i++) {
   val = parseFloat(prompt('Digite um valor: '));
   if(val%2 === 0 && par.length < 15) { par.push(val);}
   else if (val%2 === 0 && par.length == 15) { console.log('O vetor par está cheio!'); }
-
   else if (val%2 === 1 && impar.length < 15) { impar.push(val); }
   else if (val%2 === 1 && impar.length == 15) { console.log('O vetor ímpar está cheio!'); }
 }
