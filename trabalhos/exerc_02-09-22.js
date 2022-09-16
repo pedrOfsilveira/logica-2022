@@ -272,16 +272,16 @@ mensagem informando que o vetor já está cheio. Terminada a leitura, escrever o
 dois vetores.
 */
 
-var val, par, impar, quant;
+var val, par, impar;
 par = [];
 impar = [];
 
-for (c1 = 0, c2 = 0, i = 0; i < 30; i++) {
+for (i = 0; i < 30; i++) {
   val = parseFloat(prompt('Digite um valor: '));
-  if(val%2 === 0 && par.length < 15) { par[c1] = val; c1++;}
+  if(val%2 === 0 && par.length < 15) { par.push(val);}
   else if (val%2 === 0 && par.length == 15) { console.log('O vetor par está cheio!'); }
 
-  else if (val%2 === 1 && impar.length < 15) { impar[c2] = val; c2++; }
+  else if (val%2 === 1 && impar.length < 15) { impar.push(val); }
   else if (val%2 === 1 && impar.length == 15) { console.log('O vetor ímpar está cheio!'); }
 }
 console.log(par);
