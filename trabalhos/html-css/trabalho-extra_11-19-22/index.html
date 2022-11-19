@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rendimento Aplicação</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Calculadora de Aplicação</h1>
+    </div>
+    <img src="https://investidorsardinha.r7.com/wp-content/uploads/2020/12/aplicacoes-financeiras-o-que-sao-importancia-opcoes-e-como-aplicar-1.jpg" alt="Gráfico de lucro.">
+    <div class="info">
+      <p> Insira o valor do capital: <input type="number" id="capital"> </p>
+      <p> Insira o prazo de investimento (em meses): <input type="number" id="prazo"> </p>
+      <p> Insira a taxa de juros compostos: <input type="number" id="taxaC"> </p>
+      <p> Insira a taxa de juros simples: <input type="number" id="taxaS"> </p>
+      <p> <input type="button" value="Calcular" id="generate"></p>
+    </div>
+    <div id="divTabela"></div>
+    </p>
+    <div class="infoFinal">
+      <p id="vantagem"></p>
+      <p id="dica"></p>
+    </div>
+  </body>
+  <script src="juros.js"></script> 
+</html>
