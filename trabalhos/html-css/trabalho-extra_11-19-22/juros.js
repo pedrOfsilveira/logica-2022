@@ -67,7 +67,7 @@ function generateTable() {
       var td = document.createElement('TD');
       switch (j) {
         case 0:
-          td.appendChild(document.createTextNode(i));
+          td.appendChild(document.createTextNode(i+1));
           tr.appendChild(td);
           break;
         case 1:
