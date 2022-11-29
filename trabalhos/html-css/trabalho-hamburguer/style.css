@@ -1,0 +1,179 @@
+body {
+  background-image: url('fundo.jpg');
+  background-size: cover;
+  font-family: Calibri, sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* div do titulo */
+#titulo {
+  width: 500px;
+  margin: 0 auto;
+  clear: none;
+}
+
+/* div da lista de ingredientes*/
+.ingredientes {
+  float: right;
+  text-align: center;
+  color: white;
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+/*setando o tamanho dos ingredientes e a margem*/
+.tomate,.burger,.alface,.queijo,.cebola,.picles,.incorreto {
+  font-size: 35px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  text-align: center;
+  font-weight: 900;
+}
+
+#tomate,#burger,#alface,#queijo,#cebola{
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.tomate, .tomate2 { color: #FF1616; }
+.burger, .burger2 { color: #BF5018; }
+.alface, .alface2{ color: #A3D948; }
+.queijo, .queijo2 { color: #FFDE59; }
+.cebola, .cebola2 { color: #C942AD; }
+.picles, .picles2 { color: #008037}
+.incorreto { color: rgb(148, 148, 148); }
+
+.tomate2, .burger2, .alface2, .queijo2, .cebola2, .picles2 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 5px;
+}
+
+/* imagem e div do pato e do balao */
+.patoDiv {
+  width: 350px;
+  clear: none;
+  margin-right: 0;
+  margin-bottom: 0px;
+  margin-top: 0;
+  float: left;
+}
+
+#patoImg {
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 130px;
+  clear: none;
+}
+
+.speech-bubble {
+  color: white;
+  vertical-align: 100px;
+	position: relative;
+	background: #301b12;
+	border-radius: .4em;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 0px;
+  transition: 0.5s background;
+}
+
+.speech-bubble:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 26px solid transparent;
+	border-bottom-color: #301b12;
+	border-top: 0;
+	border-right: 0;
+	margin-left: -13px;
+	margin-top: -26px;
+  margin-bottom: 0;
+  transition: 0.5s border-bottom-color;
+}
+.speech-bubble:active {
+  background: #140c09;
+}
+
+/* input de texto dos ingredientes */
+input[type='text']{  
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  width: 150px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  background-image: url('https://ik.imagekit.io/kudadam/blog/the-flames-game/hero.jpg?ik-sdk-version=javascript-1.5.2&tr=q-90');
+  border: 0px none;
+  border-radius: 15px; 
+  transition: 0.5s padding;
+}
+input[type='text']:hover {
+  padding: 1%;
+}
+
+/* hamburger div*/
+#hamburguer {
+  width: 900px;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* os dois paes */
+#top {
+  width: 160px;
+}
+#bottom{
+  width: 226px;
+}
+
+/*div do tempo*/
+#time {
+  width: 500px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+  margin: 0;
+}
+
+#relogio {
+  margin: 0;
+  width: 70px;
+  float: left;
+  vertical-align: middle;
+}
+
+#contador {
+  color: white;
+  margin-left: 80px;
+  font-size: 50px;
+}
+
+
+
+
