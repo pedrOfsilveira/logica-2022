@@ -152,25 +152,27 @@ input[type='text']:hover {
 
 /*div do tempo*/
 #time {
-  width: 500px;
+  width: 200px;
   height: 120px;
   display: flex;
-  align-items: center;
-  position: absolute;
-  top: 80%;
+  align-items: center; 
   margin: 0;
+  clear: right;
+  float: right;
+  margin-right: 45px;
 }
 
 #relogio {
   margin: 0;
   width: 70px;
-  float: left;
+  float: right;
+  margin-right: 0;
   vertical-align: middle;
 }
 
 #contador {
   color: white;
-  margin-left: 80px;
+  margin-right: 25px;
   font-size: 50px;
 }
 
