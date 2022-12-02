@@ -1,9 +1,13 @@
-var lvl = 0; //declara o nível inicial 
+var lvl = 1; //declara o nível inicial 
 var div = document.getElementById('hamburguer'); //declara a div do hamburguer
 var childDiv = document.getElementById('pastIngr'); //ingredientes digitados
 var executed = false; //declara que a funçao não foi executada
 var quantidade, contagem, segundos, ingredientes, certos, posicao, quantCerta; 
 
+function level() {
+  document.querySelector('#lvl').innerHTML = 'LVL:'+lvl;
+}
+level();
 function expandText() { //função que adiciona os ingredientes ao hamburguer
   var text = document.getElementById('text').value.toUpperCase();
   if(text[text.length-1] == ' ') {
@@ -43,22 +47,19 @@ function expandText() { //função que adiciona os ingredientes ao hamburguer
 
 
 function proxPedido() {  //função para passar ao próximo pedido após o fim
-  if (ingredientes.length == 0 || verificarIngredientes() == true) {
-    lvl++;
-    quantidade = []; //quantidade de ingredientes necessários
-    for (i = 0; i < 6; i++) {
-      quantidade.push(Math.ceil(Math.random() * lvl));
-    }
-  
-    document.querySelector('#pedido').innerHTML = 
-    "<h3 id='level'>LVL: "+lvl+"</h3><br>"+
-    "<h3 class='tomate2'>TOMATE: "+quantidade[0]+"</h3><br>"+
-    "<h3 class='burger2'>BURGER: "+quantidade[1]+"</h3><br>"+
-    "<h3 class='alface2'>ALFACE: "+quantidade[2]+"</h3><br>"+
-    "<h3 class='queijo2'>QUEIJO: "+quantidade[3]+"</h3><br>"+
-    "<h3 class='cebola2'>CEBOLA: "+quantidade[4]+"</h3><br>"+
-    "<h3 class='picles2'>PICLES: "+quantidade[5]+"</h3><br>"
+  quantidade = []; //quantidade de ingredientes necessários
+  for (i = 0; i < 6; i++) {
+    quantidade.push(Math.ceil(Math.random() * lvl));
   }
+
+  document.querySelector('#pedido').innerHTML = 
+  "<h3 id='level'>LVL: "+lvl+"</h3><br>"+
+  "<h3 class='tomate2'>TOMATE: "+quantidade[0]+"</h3><br>"+
+  "<h3 class='burger2'>BURGER: "+quantidade[1]+"</h3><br>"+
+  "<h3 class='alface2'>ALFACE: "+quantidade[2]+"</h3><br>"+
+  "<h3 class='queijo2'>QUEIJO: "+quantidade[3]+"</h3><br>"+
+  "<h3 class='cebola2'>CEBOLA: "+quantidade[4]+"</h3><br>"+
+  "<h3 class='picles2'>PICLES: "+quantidade[5]+"</h3><br>";
 }
 
 function diminuiTempo() { //função que mostra e diminui os segundos
@@ -74,23 +75,7 @@ function tempoContagem() { //função que determina a contagem do tempo e começ
     while(ingredientes.length > 0) { //reseta os ingredientes
        childDiv.removeChild(childDiv.children[0]);
     }
-    switch (lvl) {
-      case 0:
-        segundos = 30;
-        break;
-      case 1:
-        segundos = 30;
-        break;
-      case 2:
-        segundos = 30;
-        break;
-      case 3:
-        segundos = 30;
-        break;
-      case 4:
-        segundos = 30;
-        break;
-    }
+    segundos = 30;
     contagem = setInterval(diminuiTempo, 1000);
     executed = true;
   }
@@ -123,6 +108,7 @@ function verificarIngredientes() { //verifica se os ingredientes estão corretos
         certos[5]++;
         break;
     }
+    
     if (i != ingredientes.length-1) {
       if (ingredientes[i].className == ingredientes[i+1].className) {
         posicao += 1;
@@ -131,6 +117,7 @@ function verificarIngredientes() { //verifica se os ingredientes estão corretos
       }
     }
   }
+  
   for (i = 0; i < certos.length; i++) {
     if (certos[i] == quantidade[i]) {
       quantCerta += 1;

@@ -176,6 +176,35 @@ input[type='text']:hover {
   font-size: 50px;
 }
 
+#ant {
+  color:white;
+  background-color: red;
+  border-radius: 5px;
+  transition: 0.5s background-color;
+}
+#ant:hover {
+  background-color: rgb(105, 26, 39);
+}
+#prox {
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  transition: 0.5s background-color;
+}
+#prox:hover {
+  background-color: rgb(35, 78, 18);
+}
 
-
+#botoes {
+  width: 130px;
+  align-content: center;
+  display: flex;
+}
+#lvl {
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  background-color: black;
+  width: 100px;
+}
 

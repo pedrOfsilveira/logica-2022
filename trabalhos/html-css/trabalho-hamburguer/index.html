@@ -8,11 +8,14 @@
   <link  rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div id="botoes">
+  <button id="ant" onclick="lvl--,level()"><<<</button>
+  <button id="prox" onclick="lvl++,level()">>>></button>
+  <p id="lvl"></p>
+</div>
   <div id="titulo">
     <h1>Silveira's Hamburgueria</h1>
   </div>
-
   <div class="ingredientes">
     <h2>INGREDIENTES:</h2>
     <h3 class="tomate">TOMATE</h3>
@@ -31,7 +34,7 @@
   </div>
   
   <div id="hamburguer">
-    <input type="text" id="text" placeholder="START" onkeyup="expandText()" onclick="proxPedido()" onmousedown="tempoContagem()" >
+    <input type="text" id="text" placeholder="START" onkeyup="expandText()"  onclick="proxPedido()" onmousedown="tempoContagem()" >
     <img id="top" src="top.png">
     <div id="pastIngr"></div>
     <img id="bottom" src="bottom.png">
