@@ -2,7 +2,7 @@ var lvl = 1; //declara o nível inicial
 var div = document.getElementById('hamburguer'); //declara a div do hamburguer
 var childDiv = document.getElementById('pastIngr'); //ingredientes digitados
 var executed = false; //declara que a funçao não foi executada
-var quantidade, contagem, segundos, ingredientes, certos, posicao, quantCerta; 
+var quantidade, contagem, segundos, ingredientes, certos, posicao, quantCerta, titulo;
 
 function level() {
   document.querySelector('#lvl').innerHTML = 'LVL:'+lvl;
@@ -31,6 +31,12 @@ function expandText() { //função que adiciona os ingredientes ao hamburguer
       case 'PICLES ':
         p.setAttribute('class','picles');
         break;
+      case 'OVO ':
+        p.setAttribute('class','ovo');
+        break;
+      case 'ARTHUR ':
+        p.setAttribute('class','arthur');
+        break;
       default:
         p.setAttribute('class','incorreto');
     }
@@ -48,7 +54,8 @@ function expandText() { //função que adiciona os ingredientes ao hamburguer
 
 function proxPedido() {  //função para passar ao próximo pedido após o fim
   quantidade = []; //quantidade de ingredientes necessários
-  for (i = 0; i < 6; i++) {
+ 
+  for (i = 0; i < 7; i++) {
     quantidade.push(Math.ceil(Math.random() * lvl));
   }
 
@@ -59,14 +66,27 @@ function proxPedido() {  //função para passar ao próximo pedido após o fim
   "<h3 class='alface2'>ALFACE: "+quantidade[2]+"</h3><br>"+
   "<h3 class='queijo2'>QUEIJO: "+quantidade[3]+"</h3><br>"+
   "<h3 class='cebola2'>CEBOLA: "+quantidade[4]+"</h3><br>"+
-  "<h3 class='picles2'>PICLES: "+quantidade[5]+"</h3><br>";
+  "<h3 class='picles2'>PICLES: "+quantidade[5]+"</h3><br>"+
+  "<h3 class='ovo2'>OVO: "+quantidade[6]+"</h3>";
+
+  titulo.innerHTML = "Silveira's Hamburgueria";
 }
+
 
 function diminuiTempo() { //função que mostra e diminui os segundos
   document.getElementById('contador').innerHTML = segundos;
   segundos--;
   if (verificarIngredientes() == true) { clearInterval(contagem); }
   else if (segundos < 0) { clearInterval(contagem); executed = false; }
+  titulo = document.querySelector('#titulotexto');
+  if (verificarIngredientes() == true) {
+    titulo.innerHTML = 'VOCÊ GANHOU!!!';
+  } else if (segundos == 0) {
+    titulo.innerHTML = 'VOCÊ PERDEU, SEU BURRO!';
+    while(ingredientes.length > 0) { //reseta os ingredientes
+      childDiv.removeChild(childDiv.children[0]);
+    }
+  }
 }
 
 function tempoContagem() { //função que determina a contagem do tempo e começa a função anterior
@@ -75,7 +95,8 @@ function tempoContagem() { //função que determina a contagem do tempo e começ
     while(ingredientes.length > 0) { //reseta os ingredientes
        childDiv.removeChild(childDiv.children[0]);
     }
-    segundos = 30;
+    
+    segundos = lvl*2+28;
     contagem = setInterval(diminuiTempo, 1000);
     executed = true;
   }
@@ -83,7 +104,7 @@ function tempoContagem() { //função que determina a contagem do tempo e começ
 
 
 function verificarIngredientes() { //verifica se os ingredientes estão corretos
-  certos = [0,0,0,0,0,0];
+  certos = [0,0,0,0,0,0,0];
   quantCerta = 0
   posicao = 0;
   ingredientes = document.getElementById('pastIngr').children;
@@ -107,26 +128,31 @@ function verificarIngredientes() { //verifica se os ingredientes estão corretos
       case 'picles': 
         certos[5]++;
         break;
+      case 'ovo': 
+        certos[6]++;
+        break;
     }
     
     if (i != ingredientes.length-1) {
       if (ingredientes[i].className == ingredientes[i+1].className) {
         posicao += 1;
+        ingredientes[i].setAttribute('class','incorreto');
       } else {
         posicao += 0;
       }
     }
   }
-  
   for (i = 0; i < certos.length; i++) {
     if (certos[i] == quantidade[i]) {
       quantCerta += 1;
     } 
   }
-  if (posicao != 0 || ingredientes.length == 0 || quantCerta != 6) {
+  if (posicao != 0 || ingredientes.length == 0 || quantCerta != 7) {
     return false;
   } else {
     executed = false;
     return true;
   }
 }
+
+

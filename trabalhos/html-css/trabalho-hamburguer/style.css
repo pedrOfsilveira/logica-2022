@@ -34,7 +34,7 @@ h2 {
 }
 
 /*setando o tamanho dos ingredientes e a margem*/
-.tomate,.burger,.alface,.queijo,.cebola,.picles,.incorreto {
+.tomate,.burger,.alface,.queijo,.cebola,.picles,.incorreto, .ovo, .arthur {
   font-size: 35px;
   margin-bottom: 7px;
   margin-top: 7px;
@@ -52,10 +52,12 @@ h2 {
 .alface, .alface2{ color: #A3D948; }
 .queijo, .queijo2 { color: #FFDE59; }
 .cebola, .cebola2 { color: #C942AD; }
-.picles, .picles2 { color: #008037}
+.picles, .picles2 { color: #008037; }
+.ovo, .ovo2 { color: white; }
+.arthur, .arthur2 { color: #f414d3;}
 .incorreto { color: rgb(148, 148, 148); }
 
-.tomate2, .burger2, .alface2, .queijo2, .cebola2, .picles2 {
+.tomate2, .burger2, .alface2, .queijo2, .cebola2, .picles2, .ovo2, .arthur2 {
   font-size: 25px;
   margin-bottom: 0;
   margin-top: 0;
