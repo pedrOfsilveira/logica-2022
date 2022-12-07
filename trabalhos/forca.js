@@ -93,4 +93,3 @@ do {
   }
 } while (erro <= 10 || aux == spaced);
 
-//Aaaaa
