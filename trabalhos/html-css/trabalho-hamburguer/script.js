@@ -34,9 +34,6 @@ function expandText() { //função que adiciona os ingredientes ao hamburguer
       case 'OVO ':
         p.setAttribute('class','ovo');
         break;
-      case 'ARTHUR ':
-        p.setAttribute('class','arthur');
-        break;
       default:
         p.setAttribute('class','incorreto');
     }
